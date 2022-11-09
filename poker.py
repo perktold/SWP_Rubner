@@ -52,8 +52,8 @@ def isFlush(hand):
 def isStraight(hand):
     rs = []
     for c in hand:
-        rs.append(c[0])
-    for i in range(max(rs)-4, max(rs)+1):
+        rs.append(c[1])
+    for i in range(min(rs), min(rs)+5):
         if not i in rs:
             return False
     return True
@@ -64,8 +64,6 @@ def nOfAKind(hand):
         rs.append(0)
     for c in hand:
         rs[c[1]]+=1
-    #debug
-    print("rs: "+str(rs))
     return rs
 
 rankings = {
@@ -118,9 +116,12 @@ if __name__ == "__main__":
     for i in range(0,10):
         statistics.append(0)
 
-    for i in range(0, 100):
+    for i in range(0, 100000):
         test = drawHand([])
         print(test)
         print(rankings[getRanking(test)])
         statistics[getRanking(test)]+=1
         print()
+
+    for i in range(0,10):
+        print(rankings[i] + ": " + str(statistics[i]/1000) + "%")
