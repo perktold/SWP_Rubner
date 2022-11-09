@@ -35,10 +35,9 @@ def getCard():
 def drawHand(hand):
     for i in range(len(hand),5):
         r = getCard()
-        if r in hand:
-            drawHand(hand)
-        else:
-            hand.append(r)
+        while r in hand:
+            r = getCard()
+        hand.append(r)
     return hand
 
 ## SHOW ME YOUR HAAAANDSS ##
