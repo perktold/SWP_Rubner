@@ -1,4 +1,5 @@
 #! /usr/bin/env /usr/bin/python3
+import random
 
 class Node:
     def __init__(self, data, next=None, prev=None):
@@ -6,9 +7,18 @@ class Node:
         self.next = next
         self.prev = prev
 
+    def __str__(self):
+        return str(self.data)
+
+    def __lt__(self, other):
+        return self.data < other.data
+
+    def __eq__(self, other):
+        return self.data == other.data
+
 class LinkedList:
     def __init__(self, data=None):
-        if data is not None:
+        if data:
             self.head = Node(data[0])
             n = self.head
             for d in data[1:]:
@@ -19,14 +29,15 @@ class LinkedList:
 
     def __str__(self):
         node = self.head
-        out="(HEAD)<->"
-        while node is not None:
+        out=""
+        while node.next:
             out+=str(node.data)+"<->"
             node=node.next
-        return out+"(TAIL)"
+        out+=str(node.data)
+        return out
 
     def __len__(self):
-        if self.head is None:
+        if not self.head:
             return 0
         n = self.head
         cnt = 1
@@ -35,6 +46,32 @@ class LinkedList:
             n = n.next
         return cnt
 
+    def __iter__(self):
+        self.iterableNode = self.head
+        return self
+
+    def __next__(self):
+        try:
+            item = self.iterableNode
+            self.iterableNode = self.iterableNode.next
+        except IndexError:
+            raise StopIteration()
+        except AttributeError:
+            raise StopIteration()
+        return item
+
+    def __getitem__(self, idx):
+        n = self.head
+        for i in range(0, idx):
+            n = n.next
+        return n
+
+    def __setitem__(self, idx, data):
+        n = self.head
+        for i in range(0, idx):
+            n = n.next
+        n = Node(data, n.next, n.prev)
+
     def insert(self, i, d):
         if i == 0:
             self.head.prev = Node(d)
@@ -42,7 +79,7 @@ class LinkedList:
             self.head = self.head.prev
             return
 
-        if self.head.next is None or i >= len(self):
+        if not self.head.next or i >= len(self):
             self.append(d)
             return
 
@@ -61,5 +98,44 @@ class LinkedList:
         self.tail.next.prev = self.tail
         self.tail = self.tail.next
 
+    def sort(self):
+        l = len(self)
+        while True:
+            swapped = False
+            for n in self:
+                if n.next and n.data > n.next.data: # swap nodes in place
+                    n1 = n
+                    n2 = n.next
+
+                    if n1 == self.head:
+                        self.head = n2
+                    if n2 == self.tail:
+                        self.tail = n1
+
+                    t = n1.next
+                    n1.next = n2.next
+                    n2.next = t
+
+                    if n1.next:
+                        n1.next.prev = n1
+
+                    if n2.next:
+                        n2.next.prev = n2
+
+                    t = n1.prev
+                    n1.prev = n2.prev
+                    n2.prev = t
+
+                    if n1.prev:
+                        n1.prev.next = n1
+
+                    if n2.prev:
+                        n2.prev.next = n2
+
+                    swapped = True
+
+            if not swapped:
+                return
+
 if __name__ == "__main__":
-    
+    lst = LinkedList([random.randint(0,9) for _ in range(0,5)])
