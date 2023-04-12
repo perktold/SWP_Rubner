@@ -9,5 +9,5 @@ SWP-Sabo
 │   ├── lotto.py	| lottospielt doppelt ausgeführt
 │   ├── poker.py	| wissenschaftlich (bzw wikipedia) akkurate poker-simulation
 │   └── RPSSL.py	| Schere-Stein-Papier-Echse-Spock in python (linux only)
-└── README.ORG
+└── README.ORG		| es beschte README of åll teim
 #+END_EXAMPLE
