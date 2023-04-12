@@ -1,5 +1,5 @@
-\times SWP - Rubner
-\times\times /einfache Aufgaben kompliziert gelöst/
+* SWP - Rubner
+** /einfache Aufgaben kompliziert gelöst/
 _{Python (und java) Aufgaben fürn Herr Professor Rubner (Servus)}
 
 #+BEGIN_EXAMPLE
@@ -12,6 +12,7 @@ SWP-Sabo
 └── README.ORG		| es beschte README of åll teim
 #+END_EXAMPLE
 
+Aufwandsklassen für typische operationen bei verketteter- bzw. doppelt verketteter Liste und ArrayList:
 |-----------+------------------+--------------------+-----------|
 | operation | linked list      | doubly linked list | arraylist |
 |-----------+------------------+--------------------+-----------|

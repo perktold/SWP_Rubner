@@ -1,6 +1,7 @@
 import random
 
 # karten: zweistellige tuples (farbe, rang)
+# im nachhinein besser: Karten klasse implementieren mit farbe, rang __str__ methode, konstruktoren für bestimmte/zufällige karte
 ranks = {0:"2",
          1:"3",
          2:"4",
