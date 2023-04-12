@@ -12,30 +12,21 @@ SWP-Sabo
 └── README.ORG		| es beschte README of åll teim
 #+END_EXAMPLE
 
-|------------------+--------------------+--------------------+-----------|
-| method           | simple linked list | double linked list | arraylist |
-|------------------+--------------------+--------------------+-----------|
-| add              | n                  | 1                  | 1         |
-| __str__          | n                  | n                  | n         |
-| __len__          | n                  | n                  | 1         |
-| is_empty         | 1                  | 1                  | n         |
-| __contains__     | n                  | n                  | n         |
-| insert           | n                  | n                  | n         |
-| set              | n                  | n                  | 1         |
-| replace (single) | n                  | n                  | 1         |
-| replace (all)    | n                  | n                  | n         |
-| clear            | 1                  | 1                  | 1         |
-| remove           | n                  | n                  | 1         |
-| pop              | n                  | 1                  | 1         |
-| pop (delete)     | n                  | n                  | n         |
-| move             | n²                 | n²                 | n²        |
-| sort             | n*log(n)           | n*log(n)           | n²        |
-| __reversed__     | n*log(n)           | n*log(n)           | n         |
-| get              | n                  | n                  | 1         |
-| get_node         | n                  | n                  | 1         |
-| convert          | n                  | n                  | n         |
-| sublist          | n                  | n                  | n         |
-| retain_all       | n                  | n                  | n         |
-| check_index      | n                  | n                  | 1         |
-| check_emtpy      | 1                  | 1                  | n         |
-|------------------+--------------------+--------------------+-----------|
+|-----------+-------------+--------------------+-----------|
+| operation | linked list | doubly linked list | arraylist |
+|-----------+-------------+--------------------+-----------|
+| get       | $n$         | $n$                | $1$       |
+| set       | $n$         | $n$                | $1$       |
+| append    | $n$         | $1$                | $1$       |
+| insert    | $n$         | $n$                | $n$       |
+| pop last  | $n$         | $1$                | $1$       |
+| pop any   | $n$         | $n$                | $n$       |
+| to str    | $n$         | $n$                | $n$       |
+| is empty  | $1$         | $1$                | $n$       |
+| contains  | $n$         | $n$                | $n$       |
+| move      | $n^2$       | $n^2$              | $n^2$     |
+| sort      | $n*\log(n)$ | $n*\log(n)$        | $n^2$     |
+| reverse   | $n*\log(n)$ | $n*\log(n)$        | $n$       |
+| length    | $n$         | $n$                | $1$       |
+| get index | $n$         | $n$                | $1$       |
+|-----------+-------------+--------------------+-----------|
