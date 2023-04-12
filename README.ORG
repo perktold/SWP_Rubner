@@ -16,10 +16,10 @@ SWP-Sabo
 | method           | simple linked list | double linked list | arraylist |
 |------------------+--------------------+--------------------+-----------|
 | add              | n                  | 1                  | 1         |
-| \_\_str\_\_      | n                  | n                  | n         |
-| \_\_len\_\_      | n                  | n                  | 1         |
+| __str__          | n                  | n                  | n         |
+| __len__          | n                  | n                  | 1         |
 | is_empty         | 1                  | 1                  | n         |
-| \_\_contains\_\_ | n                  | n                  | n         |
+| __contains__     | n                  | n                  | n         |
 | insert           | n                  | n                  | n         |
 | set              | n                  | n                  | 1         |
 | replace (single) | n                  | n                  | 1         |
@@ -30,7 +30,7 @@ SWP-Sabo
 | pop (delete)     | n                  | n                  | n         |
 | move             | n²                 | n²                 | n²        |
 | sort             | n*log(n)           | n*log(n)           | n²        |
-| \_\_reversed\_\_ | n*log(n)           | n*log(n)           | n         |
+| __reversed__     | n*log(n)           | n*log(n)           | n         |
 | get              | n                  | n                  | 1         |
 | get_node         | n                  | n                  | 1         |
 | convert          | n                  | n                  | n         |
