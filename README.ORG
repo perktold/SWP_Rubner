@@ -11,3 +11,31 @@ SWP-Sabo
 │   └── RPSSL.py	| Schere-Stein-Papier-Echse-Spock in python (linux only)
 └── README.ORG		| es beschte README of åll teim
 #+END_EXAMPLE
+
+|------------------+--------------------+--------------------+-----------|
+| method           | simple linked list | double linked list | arraylist |
+|------------------+--------------------+--------------------+-----------|
+| add              | n                  | 1                  | 1         |
+| \_\_str\_\_      | n                  | n                  | n         |
+| \_\_len\_\_      | n                  | n                  | 1         |
+| is_empty         | 1                  | 1                  | n         |
+| \_\_contains\_\_ | n                  | n                  | n         |
+| insert           | n                  | n                  | n         |
+| set              | n                  | n                  | 1         |
+| replace (single) | n                  | n                  | 1         |
+| replace (all)    | n                  | n                  | n         |
+| clear            | 1                  | 1                  | 1         |
+| remove           | n                  | n                  | 1         |
+| pop              | n                  | 1                  | 1         |
+| pop (delete)     | n                  | n                  | n         |
+| move             | n²                 | n²                 | n²        |
+| sort             | n*log(n)           | n*log(n)           | n²        |
+| \_\_reversed\_\_ | n*log(n)           | n*log(n)           | n         |
+| get              | n                  | n                  | 1         |
+| get_node         | n                  | n                  | 1         |
+| convert          | n                  | n                  | n         |
+| sublist          | n                  | n                  | n         |
+| retain_all       | n                  | n                  | n         |
+| check_index      | n                  | n                  | 1         |
+| check_emtpy      | 1                  | 1                  | n         |
+|------------------+--------------------+--------------------+-----------|
