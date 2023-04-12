@@ -2,10 +2,12 @@
 ** /einfache Aufgaben kompliziert gelöst/
 _{Python (und java) Aufgaben fürn Herr Professor Rubner (Servus)}
 
-=SWP-Sabo
+#+BEGIN_EXAMPLE
+SWP-Sabo
 ├── python
 │   ├── linked_list.py	| doppelt verkettete Liste in python
 │   ├── lotto.py	| lottospielt doppelt ausgeführt
 │   ├── poker.py	| wissenschaftlich (bzw wikipedia) akkurate poker-simulation
 │   └── RPSSL.py	| Schere-Stein-Papier-Echse-Spock in python (linux only)
-└── README.ORG=
+└── README.ORG
+#+END_EXAMPLE
