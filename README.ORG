@@ -1,5 +1,5 @@
-* SWP - Rubner
-** /einfache Aufgaben kompliziert gelöst/
+\times SWP - Rubner
+\times\times /einfache Aufgaben kompliziert gelöst/
 _{Python (und java) Aufgaben fürn Herr Professor Rubner (Servus)}
 
 #+BEGIN_EXAMPLE
@@ -12,21 +12,21 @@ SWP-Sabo
 └── README.ORG		| es beschte README of åll teim
 #+END_EXAMPLE
 
-|-----------+-------------+--------------------+-----------|
-| operation | linked list | doubly linked list | arraylist |
-|-----------+-------------+--------------------+-----------|
-| get       | $n$         | $n$                | $1$       |
-| set       | $n$         | $n$                | $1$       |
-| append    | $n$         | $1$                | $1$       |
-| insert    | $n$         | $n$                | $n$       |
-| pop last  | $n$         | $1$                | $1$       |
-| pop any   | $n$         | $n$                | $n$       |
-| to str    | $n$         | $n$                | $n$       |
-| is empty  | $1$         | $1$                | $n$       |
-| contains  | $n$         | $n$                | $n$       |
-| move      | $n^2$       | $n^2$              | $n^2$     |
-| sort      | $n*\log(n)$ | $n*\log(n)$        | $n^2$     |
-| reverse   | $n*\log(n)$ | $n*\log(n)$        | $n$       |
-| length    | $n$         | $n$                | $1$       |
-| get index | $n$         | $n$                | $1$       |
-|-----------+-------------+--------------------+-----------|
+|-----------+------------------+--------------------+-----------|
+| operation | linked list      | doubly linked list | arraylist |
+|-----------+------------------+--------------------+-----------|
+| get       | $n$              | $n$                | $1$       |
+| set       | $n$              | $n$                | $1$       |
+| append    | $n$              | $1$                | $1$       |
+| insert    | $n$              | $n$                | $n$       |
+| pop last  | $n$              | $1$                | $1$       |
+| pop any   | $n$              | $n$                | $n$       |
+| to str    | $n$              | $n$                | $n$       |
+| is empty  | $1$              | $1$                | $n$       |
+| contains  | $n$              | $n$                | $n$       |
+| move      | $n^2$            | $n^2$              | $n^2$     |
+| sort      | $n\times\log(n)$ | $n\times\log(n)$   | $n^2$     |
+| reverse   | $n\times\log(n)$ | $n\times\log(n)$   | $n$       |
+| length    | $n$              | $n$                | $1$       |
+| get index | $n$              | $n$                | $1$       |
+|-----------+------------------+--------------------+-----------|
